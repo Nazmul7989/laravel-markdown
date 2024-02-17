@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $post = \App\Models\Post::first();
+
+    return view('welcome',compact('post'));
 });
